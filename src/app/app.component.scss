@@ -1,0 +1,24 @@
+md-toolbar {
+    background: #F4B42A;
+}
+
+md-toolbar img {
+    width: 36px;
+    margin-right: 10px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section+span {
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    color: gray;
+}
