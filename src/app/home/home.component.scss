@@ -1,0 +1,25 @@
+button img {
+    width: 200px;
+}
+
+md-card {
+    width: 360px;
+    text-align: center;
+}
+
+md-card-content {
+    background-image: url(assets/images/bg.png);
+    background-position: center center;
+    background-repeat: repeat-y;
+    height: 360px;
+    animation: animate-bg 30s linear infinite;
+}
+
+@keyframes animate-bg {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
