@@ -5,14 +5,19 @@ button img {
 md-card {
     width: 360px;
     text-align: center;
-}
-
-md-card-content {
-    background-image: url(assets/images/bg.png);
-    background-position: center center;
-    background-repeat: repeat-y;
-    height: 360px;
-    animation: animate-bg 30s linear infinite;
+    md-card-content {
+        div {
+            background-image: url(assets/images/bg.png);
+            background-position: center center;
+            background-repeat: repeat-y;
+            height: 360px;
+            animation: animate-bg 30s linear infinite;
+        }
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
 }
 
 @keyframes animate-bg {

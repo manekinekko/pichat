@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFire } from 'angularfire2';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  session: any = null;
+
+  constructor(private af: AngularFire) { 
+    this.af.auth.subscribe( session => this.session = session );
+  }
 
   ngOnInit() {
   }
 
   login() {
-    console.log('Hi');
+    this.af.auth.login();
+  }
+
+  logout() {
+    this.af.auth.logout();
   }
 
 }
