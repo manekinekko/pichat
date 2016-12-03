@@ -1,0 +1,9 @@
+<md-list>
+  <md-list-item *ngFor="let room of tooms">
+    <h3 md-line> {{room.name}} </h3>
+    <p md-line>
+      <span> {{room.description}} </span>
+      <span> People connected {{room.people}} </span>
+    </p>
+  </md-list-item>
+</md-list>

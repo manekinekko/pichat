@@ -1,37 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
-import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+
+import { CoreModule } from './core/core.module';
+import { ChatRoomModule } from './chat-room/chat-room.module';
+import { HomeModule } from './home/home.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-
-export const firebaseConfig = {
-  apiKey: "AIzaSyDElp_wKrZBWgh-rhsfRlsyHKm-101Lqr0",
-  authDomain: "pichat-381aa.firebaseapp.com",
-  databaseURL: "https://pichat-381aa.firebaseio.com",
-  storageBucket: "pichat-381aa.appspot.com",
-  messagingSenderId: "689229560693"
-};
-
-const firebaseAuthConfig = {
-  provider: AuthProviders.Google,
-  method: AuthMethods.Redirect
-};
+import { AppRoutes } from './app.routes';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    RouterModule.forRoot(AppRoutes),
     MaterialModule.forRoot(),
-    AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig)
+    CoreModule,
+    HomeModule,
+    ChatRoomModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,25 @@
+<md-card>
+    <md-card-subtitle></md-card-subtitle>
+    <md-card-title></md-card-title>
+    <md-card-content>
+        <div *ngIf="!session"></div>
+        <img *ngIf="session" [src]="session.auth.photoURL || 'assets/images/chat-2-icon.png'" alt="">
+    </md-card-content>
+    <md-card-actions>
+
+        <button *ngIf="!session" (click)="login()">
+         <img src="assets/images/btn/btn_google_signin_light_normal_web@2x.png" alt="google sign-in" />
+        </button>
+
+        <span *ngIf="session">
+            <button md-raised-button (click)="logout()">
+                Welcome {{ session.auth.displayName }} | Sign Out
+            </button>
+        </span>
+
+    </md-card-actions>
+</md-card>
+
+<button md-fab *ngIf="session" routerLink="/rooms">
+    <md-icon>home</md-icon>
+</button>
