@@ -15,6 +15,13 @@ button[md-fab] {
     color: white;
     background-color: #34C3EE;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
+    &.md-position-top {
+        top: 30px;
+    }
+    &.md-size-medium {
+        width: 66px;
+        height: 66px;
+    }
 }
