@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { AngularFire } from 'angularfire2';
+import { SessionService } from '../../shared/session.service';
 
 @Component({
   selector: 'app-login',
@@ -13,8 +13,11 @@ export class LoginComponent implements OnInit {
   @Output() onLogin: EventEmitter<any>;
   @Output() onLogout: EventEmitter<any>;
 
-  constructor(private af: AngularFire) { 
-    this.af.auth.subscribe( session => {
+  constructor(private ss: SessionService) { 
+
+    this.onLogin = new EventEmitter<any>();
+    this.onLogout = new EventEmitter<any>();
+    this.ss.getAuth().subscribe( session => {
       
       if(session) {
         this.onLogin.emit(session);
@@ -25,20 +28,17 @@ export class LoginComponent implements OnInit {
       
       this.session = session;
     });
-
-    this.onLogin = new EventEmitter<any>();
-    this.onLogout = new EventEmitter<any>();
   }
 
   ngOnInit() {
   }
 
   login() {
-    this.af.auth.login();
+    this.ss.getAuth().login();
   }
 
   logout() {
-    this.af.auth.logout();
+    this.ss.getAuth().logout();
   }
 
 }

@@ -11,17 +11,22 @@ md-card {
     padding: 25px 0px;
 }
 
-button[md-fab] {
-    color: white;
-    background-color: #34C3EE;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    &.md-position-top {
-        top: 30px;
-    }
-    &.md-size-medium {
-        width: 66px;
-        height: 66px;
+button {
+    background: transparent;
+    border: 0 none;
+    &[md-fab] {
+        color: white;
+        background-color: #34C3EE;
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1;
+        &.md-position-top {
+            top: 30px;
+        }
+        &.md-size-medium {
+            width: 66px;
+            height: 66px;
+        }
     }
 }

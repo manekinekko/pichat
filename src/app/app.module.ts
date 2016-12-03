@@ -8,6 +8,7 @@ import { MaterialModule } from '@angular/material';
 import { CoreModule } from './core/core.module';
 import { ChatRoomModule } from './chat-room/chat-room.module';
 import { HomeModule } from './home/home.module';
+import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes';
@@ -23,6 +24,7 @@ import { AppRoutes } from './app.routes';
     RouterModule.forRoot(AppRoutes),
     MaterialModule.forRoot(),
     CoreModule,
+    SharedModule,
     HomeModule,
     ChatRoomModule
   ],

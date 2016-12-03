@@ -1,0 +1,38 @@
+:host {
+    width: 100%;
+}
+
+md-card {
+    &:first-child {
+        padding: 0;
+        margin-bottom: 110px;
+        z-index: 1;
+    }
+}
+
+md-input.full-width {
+    width: 100%;
+}
+
+md-list-item.me .md-list-item {
+    flex-direction: row-reverse;
+}
+
+.message-date {
+    color: gray;
+    font-size: 13px;
+}
+
+.messate-text span {
+    white-space: normal;
+}
+
+.message-container {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    margin: 0;
+    right: 0;
+    left: 0;
+}

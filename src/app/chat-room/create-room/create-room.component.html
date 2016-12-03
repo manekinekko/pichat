@@ -1,0 +1,9 @@
+<button md-fab class="md-position-top md-size-medium" (click)="create(f.value)">
+    <md-icon>check</md-icon>
+</button>
+
+<md-card>
+    <form #f="ngForm">
+        <md-input name="roomName" ngModel placeholder="Enter room name" maxlength="25"></md-input>
+    </form>
+</md-card>

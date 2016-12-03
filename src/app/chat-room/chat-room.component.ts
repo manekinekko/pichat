@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatRoomService } from './chat-room.service';
 
 @Component({
   selector: 'app-chat-room',
@@ -7,21 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatRoomComponent implements OnInit {
 
-  rooms = [{
-    name: 'room 1'
-  }, {
-    name: 'room 1'
-  }, {
-    name: 'room 1'
-  }, {
-    name: 'room 1'
-  }, {
-    name: 'room 1'
-  }];
+  rooms = [];
 
-  constructor() { }
+  constructor(private cr: ChatRoomService) {
+  }
 
   ngOnInit() {
+    this.cr.getRooms().subscribe(
+      rooms => this.rooms = rooms
+    );
   }
 
 }

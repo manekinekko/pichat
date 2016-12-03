@@ -1,0 +1,24 @@
+<button md-fab class="md-position-top" routerLink="/rooms">
+    <md-icon>list</md-icon>
+</button>
+
+<md-card>
+    <md-list>
+        <md-list-item *ngFor="let message of messages | async" [ngClass]="{ 'me': isMyMessage(message) }">
+            <img md-list-avatar [src]="message.user.photoURL">
+            <p md-line class="message-date">
+                {{message.date | date:'d/M/y'}}
+            </p>
+            <p md-line class="message-text">
+                <span> {{message.text}} </span>
+            </p>
+        </md-list-item>
+    </md-list>
+</md-card>
+<md-card class="message-container">
+    <button md-prefix><md-icon>camera</md-icon></button>
+    <md-input [(ngModel)]="newMessage" placeholder="Your message..." maxlength="140" class="full-width" #characterCountHint>
+        <md-hint align="end">{{characterCountHint.characterCount}} / 140</md-hint>
+    </md-input>
+    <button md-suffix [disabled]="!newMessage" (click)="send()"><md-icon>send</md-icon></button>
+</md-card>
