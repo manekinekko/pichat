@@ -10,3 +10,11 @@ md-card {
     margin: 10px;
     padding: 25px 0px;
 }
+
+button[md-fab] {
+    color: white;
+    background-color: #34C3EE;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}

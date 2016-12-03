@@ -1,1 +1,5 @@
-<app-login></app-login>
+<app-login (onLogin)="onLogin($event)" (onLogout)="onLogout()"></app-login>
+
+<button md-fab *ngIf="session" routerLink="/rooms">
+    <md-icon>list</md-icon>
+</button>
