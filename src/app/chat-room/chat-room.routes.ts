@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { RoomsListComponent } from './rooms-list/rooms-list.component';
+import { ChatRoomComponent } from './chat-room.component';
 
 export const AppRoutes: Routes = [
-    { path: 'rooms', component: RoomsListComponent }
+    { path: 'rooms', component: ChatRoomComponent }
 ];

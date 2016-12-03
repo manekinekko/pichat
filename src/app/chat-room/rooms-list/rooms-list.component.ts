@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-rooms-list',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomsListComponent implements OnInit {
 
-  rooms = [];
+  @Input() rooms: any[];
 
   constructor() { }
 

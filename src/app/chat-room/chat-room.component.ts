@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatRoomComponent implements OnInit {
 
+  rooms = [{
+    name: 'room 1'
+  }, {
+    name: 'room 1'
+  }, {
+    name: 'room 1'
+  }, {
+    name: 'room 1'
+  }, {
+    name: 'room 1'
+  }];
+
   constructor() { }
 
   ngOnInit() {

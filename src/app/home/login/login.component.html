@@ -3,7 +3,7 @@
     <md-card-title></md-card-title>
     <md-card-content>
         <div *ngIf="!session"></div>
-        <img *ngIf="session" [src]="session.auth.photoURL || 'assets/images/chat-2-icon.png'" alt="">
+        <img *ngIf="session" [src]="session.auth.photoURL" alt="">
     </md-card-content>
     <md-card-actions>
 
