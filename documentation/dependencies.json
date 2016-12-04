@@ -1,0 +1,1220 @@
+[
+  {
+    "name": "AppModule",
+    "file": "src/app/app.module.ts",
+    "providers": [],
+    "declarations": [
+      {
+        "name": "AppComponent",
+        "file": "src/app/app.component.ts",
+        "selector": "app-root",
+        "providers": [],
+        "templateUrl": [
+          "app.component.html"
+        ],
+        "styleUrls": [
+          "app.component.scss"
+        ],
+        "__raw": [
+          {
+            "kind": 253,
+            "pos": 123,
+            "end": 146,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 123,
+              "end": 134,
+              "flags": 0,
+              "text": "selector"
+            },
+            "initializer": {
+              "kind": 9,
+              "pos": 135,
+              "end": 146,
+              "flags": 0,
+              "text": "app-root"
+            }
+          },
+          {
+            "kind": 253,
+            "pos": 147,
+            "end": 185,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 147,
+              "end": 161,
+              "flags": 0,
+              "text": "templateUrl"
+            },
+            "initializer": {
+              "kind": 9,
+              "pos": 162,
+              "end": 185,
+              "flags": 0,
+              "text": "./app.component.html"
+            }
+          },
+          {
+            "kind": 253,
+            "pos": 186,
+            "end": 224,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 186,
+              "end": 198,
+              "flags": 0,
+              "text": "styleUrls"
+            },
+            "initializer": {
+              "kind": 170,
+              "pos": 199,
+              "end": 224,
+              "flags": 0,
+              "elements": [
+                {
+                  "kind": 9,
+                  "pos": 201,
+                  "end": 223,
+                  "flags": 0,
+                  "text": "./app.component.scss"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "imports": [
+      {
+        "name": "BrowserModule"
+      },
+      {
+        "name": "FormsModule"
+      },
+      {
+        "name": "HttpModule"
+      },
+      {
+        "ns": "RouterModule",
+        "name": "RouterModule.forRoot(args)"
+      },
+      {
+        "ns": "MaterialModule",
+        "name": "MaterialModule.forRoot()"
+      },
+      {
+        "name": "CoreModule"
+      },
+      {
+        "name": "SharedModule"
+      },
+      {
+        "name": "HomeModule"
+      },
+      {
+        "name": "ChatRoomModule"
+      }
+    ],
+    "exports": [],
+    "bootstrap": [
+      {
+        "name": "AppComponent"
+      }
+    ],
+    "__raw": [
+      {
+        "kind": 253,
+        "pos": 611,
+        "end": 650,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 611,
+          "end": 626,
+          "flags": 0,
+          "text": "declarations"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 627,
+          "end": 650,
+          "flags": 0,
+          "multiLine": true,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 629,
+              "end": 646,
+              "flags": 0,
+              "text": "AppComponent"
+            }
+          ]
+        }
+      },
+      {
+        "kind": 253,
+        "pos": 651,
+        "end": 873,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 651,
+          "end": 661,
+          "flags": 0,
+          "text": "imports"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 662,
+          "end": 873,
+          "flags": 0,
+          "multiLine": true,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 664,
+              "end": 682,
+              "flags": 0,
+              "text": "BrowserModule"
+            },
+            {
+              "kind": 69,
+              "pos": 683,
+              "end": 699,
+              "flags": 0,
+              "text": "FormsModule"
+            },
+            {
+              "kind": 69,
+              "pos": 700,
+              "end": 715,
+              "flags": 0,
+              "text": "HttpModule"
+            },
+            {
+              "kind": 174,
+              "pos": 716,
+              "end": 769,
+              "flags": 0,
+              "expression": {
+                "kind": 172,
+                "pos": 716,
+                "end": 741,
+                "flags": 0,
+                "expression": {
+                  "kind": 69,
+                  "pos": 716,
+                  "end": 733,
+                  "flags": 0,
+                  "text": "RouterModule"
+                },
+                "name": {
+                  "kind": 69,
+                  "pos": 734,
+                  "end": 741,
+                  "flags": 0,
+                  "text": "forRoot"
+                }
+              },
+              "arguments": [
+                {
+                  "kind": 69,
+                  "pos": 742,
+                  "end": 751,
+                  "flags": 0,
+                  "text": "AppRoutes"
+                },
+                {
+                  "kind": 171,
+                  "pos": 752,
+                  "end": 768,
+                  "flags": 0,
+                  "properties": [
+                    {
+                      "kind": 253,
+                      "pos": 754,
+                      "end": 767,
+                      "flags": 0,
+                      "name": {
+                        "kind": 69,
+                        "pos": 754,
+                        "end": 761,
+                        "flags": 0,
+                        "text": "useHash"
+                      },
+                      "initializer": {
+                        "kind": 99,
+                        "pos": 762,
+                        "end": 767,
+                        "flags": 0
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": 174,
+              "pos": 770,
+              "end": 799,
+              "flags": 0,
+              "expression": {
+                "kind": 172,
+                "pos": 770,
+                "end": 797,
+                "flags": 0,
+                "expression": {
+                  "kind": 69,
+                  "pos": 770,
+                  "end": 789,
+                  "flags": 0,
+                  "text": "MaterialModule"
+                },
+                "name": {
+                  "kind": 69,
+                  "pos": 790,
+                  "end": 797,
+                  "flags": 0,
+                  "text": "forRoot"
+                }
+              },
+              "arguments": []
+            },
+            {
+              "kind": 69,
+              "pos": 800,
+              "end": 815,
+              "flags": 0,
+              "text": "CoreModule"
+            },
+            {
+              "kind": 69,
+              "pos": 816,
+              "end": 833,
+              "flags": 0,
+              "text": "SharedModule"
+            },
+            {
+              "kind": 69,
+              "pos": 834,
+              "end": 849,
+              "flags": 0,
+              "text": "HomeModule"
+            },
+            {
+              "kind": 69,
+              "pos": 850,
+              "end": 869,
+              "flags": 0,
+              "text": "ChatRoomModule"
+            }
+          ]
+        }
+      },
+      {
+        "kind": 253,
+        "pos": 874,
+        "end": 890,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 874,
+          "end": 886,
+          "flags": 0,
+          "text": "providers"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 887,
+          "end": 890,
+          "flags": 0,
+          "elements": []
+        }
+      },
+      {
+        "kind": 253,
+        "pos": 891,
+        "end": 919,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 891,
+          "end": 903,
+          "flags": 0,
+          "text": "bootstrap"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 904,
+          "end": 919,
+          "flags": 0,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 906,
+              "end": 918,
+              "flags": 0,
+              "text": "AppComponent"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "ChatRoomModule",
+    "file": "app/chat-room/chat-room.module.ts",
+    "providers": [
+      {
+        "name": "ChatRoomService"
+      },
+      {
+        "name": "ChatRoomGuard"
+      }
+    ],
+    "declarations": [
+      {
+        "name": "ChatRoomComponent",
+        "file": "app/chat-room/chat-room.component.ts",
+        "selector": "app-chat-room",
+        "providers": [],
+        "templateUrl": [
+          "chat-room.component.html"
+        ],
+        "styleUrls": [
+          "chat-room.component.scss"
+        ],
+        "__raw": [
+          {
+            "kind": 253,
+            "pos": 179,
+            "end": 207,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 179,
+              "end": 190,
+              "flags": 0,
+              "text": "selector"
+            },
+            "initializer": {
+              "kind": 9,
+              "pos": 191,
+              "end": 207,
+              "flags": 0,
+              "text": "app-chat-room"
+            }
+          },
+          {
+            "kind": 253,
+            "pos": 208,
+            "end": 252,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 208,
+              "end": 222,
+              "flags": 0,
+              "text": "templateUrl"
+            },
+            "initializer": {
+              "kind": 9,
+              "pos": 223,
+              "end": 252,
+              "flags": 0,
+              "text": "./chat-room.component.html"
+            }
+          },
+          {
+            "kind": 253,
+            "pos": 253,
+            "end": 297,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 253,
+              "end": 265,
+              "flags": 0,
+              "text": "styleUrls"
+            },
+            "initializer": {
+              "kind": 170,
+              "pos": 266,
+              "end": 297,
+              "flags": 0,
+              "elements": [
+                {
+                  "kind": 9,
+                  "pos": 268,
+                  "end": 296,
+                  "flags": 0,
+                  "text": "./chat-room.component.scss"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "RoomsListComponent"
+      },
+      {
+        "name": "CreateRoomComponent"
+      },
+      {
+        "name": "RoomComponent"
+      }
+    ],
+    "imports": [
+      {
+        "name": "CommonModule"
+      },
+      {
+        "name": "FormsModule"
+      },
+      {
+        "name": "MaterialModule"
+      },
+      {
+        "ns": "RouterModule",
+        "name": "RouterModule.forChild(args)"
+      },
+      {
+        "name": "SharedModule"
+      }
+    ],
+    "exports": [],
+    "bootstrap": [],
+    "__raw": [
+      {
+        "kind": 253,
+        "pos": 730,
+        "end": 857,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 730,
+          "end": 740,
+          "flags": 0,
+          "text": "imports"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 741,
+          "end": 857,
+          "flags": 0,
+          "multiLine": true,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 743,
+              "end": 760,
+              "flags": 0,
+              "text": "CommonModule"
+            },
+            {
+              "kind": 69,
+              "pos": 761,
+              "end": 777,
+              "flags": 0,
+              "text": "FormsModule"
+            },
+            {
+              "kind": 69,
+              "pos": 778,
+              "end": 797,
+              "flags": 0,
+              "text": "MaterialModule"
+            },
+            {
+              "kind": 174,
+              "pos": 798,
+              "end": 835,
+              "flags": 0,
+              "expression": {
+                "kind": 172,
+                "pos": 798,
+                "end": 824,
+                "flags": 0,
+                "expression": {
+                  "kind": 69,
+                  "pos": 798,
+                  "end": 815,
+                  "flags": 0,
+                  "text": "RouterModule"
+                },
+                "name": {
+                  "kind": 69,
+                  "pos": 816,
+                  "end": 824,
+                  "flags": 0,
+                  "text": "forChild"
+                }
+              },
+              "arguments": [
+                {
+                  "kind": 69,
+                  "pos": 825,
+                  "end": 834,
+                  "flags": 0,
+                  "text": "AppRoutes"
+                }
+              ]
+            },
+            {
+              "kind": 69,
+              "pos": 836,
+              "end": 853,
+              "flags": 0,
+              "text": "SharedModule"
+            }
+          ]
+        }
+      },
+      {
+        "kind": 253,
+        "pos": 858,
+        "end": 916,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 858,
+          "end": 870,
+          "flags": 0,
+          "text": "providers"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 871,
+          "end": 916,
+          "flags": 0,
+          "multiLine": true,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 873,
+              "end": 893,
+              "flags": 0,
+              "text": "ChatRoomService"
+            },
+            {
+              "kind": 69,
+              "pos": 894,
+              "end": 912,
+              "flags": 0,
+              "text": "ChatRoomGuard"
+            }
+          ]
+        }
+      },
+      {
+        "kind": 253,
+        "pos": 917,
+        "end": 1009,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 917,
+          "end": 932,
+          "flags": 0,
+          "text": "declarations"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 933,
+          "end": 1009,
+          "flags": 0,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 935,
+              "end": 952,
+              "flags": 0,
+              "text": "ChatRoomComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 953,
+              "end": 972,
+              "flags": 0,
+              "text": "RoomsListComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 973,
+              "end": 993,
+              "flags": 0,
+              "text": "CreateRoomComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 994,
+              "end": 1008,
+              "flags": 0,
+              "text": "RoomComponent"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "CoreModule",
+    "file": "app/core/core.module.ts",
+    "providers": [],
+    "declarations": [],
+    "imports": [
+      {
+        "ns": "AngularFireModule",
+        "name": "AngularFireModule.initializeApp(args)"
+      }
+    ],
+    "exports": [],
+    "bootstrap": [],
+    "__raw": [
+      {
+        "kind": 253,
+        "pos": 500,
+        "end": 590,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 500,
+          "end": 510,
+          "flags": 0,
+          "text": "imports"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 511,
+          "end": 590,
+          "flags": 0,
+          "multiLine": true,
+          "elements": [
+            {
+              "kind": 174,
+              "pos": 513,
+              "end": 585,
+              "flags": 0,
+              "expression": {
+                "kind": 172,
+                "pos": 513,
+                "end": 549,
+                "flags": 0,
+                "expression": {
+                  "kind": 69,
+                  "pos": 513,
+                  "end": 535,
+                  "flags": 0,
+                  "text": "AngularFireModule"
+                },
+                "name": {
+                  "kind": 69,
+                  "pos": 536,
+                  "end": 549,
+                  "flags": 0,
+                  "text": "initializeApp"
+                }
+              },
+              "arguments": [
+                {
+                  "kind": 69,
+                  "pos": 550,
+                  "end": 564,
+                  "flags": 0,
+                  "text": "firebaseConfig"
+                },
+                {
+                  "kind": 69,
+                  "pos": 565,
+                  "end": 584,
+                  "flags": 0,
+                  "text": "firebaseAuthConfig"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "HomeModule",
+    "file": "app/home/home.module.ts",
+    "providers": [],
+    "declarations": [
+      {
+        "name": "HomeComponent",
+        "file": "app/home/home.component.ts",
+        "selector": "app-home",
+        "providers": [],
+        "templateUrl": [
+          "home.component.html"
+        ],
+        "styleUrls": [
+          "home.component.scss"
+        ],
+        "__raw": [
+          {
+            "kind": 253,
+            "pos": 124,
+            "end": 147,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 124,
+              "end": 135,
+              "flags": 0,
+              "text": "selector"
+            },
+            "initializer": {
+              "kind": 9,
+              "pos": 136,
+              "end": 147,
+              "flags": 0,
+              "text": "app-home"
+            }
+          },
+          {
+            "kind": 253,
+            "pos": 148,
+            "end": 187,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 148,
+              "end": 162,
+              "flags": 0,
+              "text": "templateUrl"
+            },
+            "initializer": {
+              "kind": 9,
+              "pos": 163,
+              "end": 187,
+              "flags": 0,
+              "text": "./home.component.html"
+            }
+          },
+          {
+            "kind": 253,
+            "pos": 188,
+            "end": 227,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 188,
+              "end": 200,
+              "flags": 0,
+              "text": "styleUrls"
+            },
+            "initializer": {
+              "kind": 170,
+              "pos": 201,
+              "end": 227,
+              "flags": 0,
+              "elements": [
+                {
+                  "kind": 9,
+                  "pos": 203,
+                  "end": 226,
+                  "flags": 0,
+                  "text": "./home.component.scss"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "LoginComponent"
+      }
+    ],
+    "imports": [
+      {
+        "name": "CommonModule"
+      },
+      {
+        "name": "MaterialModule"
+      },
+      {
+        "ns": "RouterModule",
+        "name": "RouterModule.forChild(args)"
+      }
+    ],
+    "exports": [
+      {
+        "name": "HomeComponent"
+      }
+    ],
+    "bootstrap": [],
+    "__raw": [
+      {
+        "kind": 253,
+        "pos": 354,
+        "end": 446,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 354,
+          "end": 364,
+          "flags": 0,
+          "text": "imports"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 365,
+          "end": 446,
+          "flags": 0,
+          "multiLine": true,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 367,
+              "end": 384,
+              "flags": 0,
+              "text": "CommonModule"
+            },
+            {
+              "kind": 69,
+              "pos": 385,
+              "end": 404,
+              "flags": 0,
+              "text": "MaterialModule"
+            },
+            {
+              "kind": 174,
+              "pos": 405,
+              "end": 442,
+              "flags": 0,
+              "expression": {
+                "kind": 172,
+                "pos": 405,
+                "end": 431,
+                "flags": 0,
+                "expression": {
+                  "kind": 69,
+                  "pos": 405,
+                  "end": 422,
+                  "flags": 0,
+                  "text": "RouterModule"
+                },
+                "name": {
+                  "kind": 69,
+                  "pos": 423,
+                  "end": 431,
+                  "flags": 0,
+                  "text": "forChild"
+                }
+              },
+              "arguments": [
+                {
+                  "kind": 69,
+                  "pos": 432,
+                  "end": 441,
+                  "flags": 0,
+                  "text": "AppRoutes"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "kind": 253,
+        "pos": 447,
+        "end": 495,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 447,
+          "end": 462,
+          "flags": 0,
+          "text": "declarations"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 463,
+          "end": 495,
+          "flags": 0,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 465,
+              "end": 478,
+              "flags": 0,
+              "text": "HomeComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 479,
+              "end": 494,
+              "flags": 0,
+              "text": "LoginComponent"
+            }
+          ]
+        }
+      },
+      {
+        "kind": 253,
+        "pos": 496,
+        "end": 523,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 496,
+          "end": 506,
+          "flags": 0,
+          "text": "exports"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 507,
+          "end": 523,
+          "flags": 0,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 509,
+              "end": 522,
+              "flags": 0,
+              "text": "HomeComponent"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "SharedModule",
+    "file": "app/shared/shared.module.ts",
+    "providers": [
+      {
+        "name": "SessionService"
+      },
+      {
+        "name": "CameraService"
+      }
+    ],
+    "declarations": [
+      {
+        "name": "CameraComponent",
+        "file": "shared/camera/camera.component.ts",
+        "selector": "app-camera",
+        "providers": [],
+        "templateUrl": [
+          "camera.component.html"
+        ],
+        "styleUrls": [
+          "camera.component.scss"
+        ],
+        "__raw": [
+          {
+            "kind": 253,
+            "pos": 159,
+            "end": 184,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 159,
+              "end": 170,
+              "flags": 0,
+              "text": "selector"
+            },
+            "initializer": {
+              "kind": 9,
+              "pos": 171,
+              "end": 184,
+              "flags": 0,
+              "text": "app-camera"
+            }
+          },
+          {
+            "kind": 253,
+            "pos": 185,
+            "end": 226,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 185,
+              "end": 199,
+              "flags": 0,
+              "text": "templateUrl"
+            },
+            "initializer": {
+              "kind": 9,
+              "pos": 200,
+              "end": 226,
+              "flags": 0,
+              "text": "./camera.component.html"
+            }
+          },
+          {
+            "kind": 253,
+            "pos": 227,
+            "end": 268,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 227,
+              "end": 239,
+              "flags": 0,
+              "text": "styleUrls"
+            },
+            "initializer": {
+              "kind": 170,
+              "pos": 240,
+              "end": 268,
+              "flags": 0,
+              "elements": [
+                {
+                  "kind": 9,
+                  "pos": 242,
+                  "end": 267,
+                  "flags": 0,
+                  "text": "./camera.component.scss"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "imports": [
+      {
+        "name": "MaterialModule"
+      }
+    ],
+    "exports": [
+      {
+        "name": "CameraComponent"
+      }
+    ],
+    "bootstrap": [],
+    "__raw": [
+      {
+        "kind": 253,
+        "pos": 277,
+        "end": 334,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 277,
+          "end": 289,
+          "flags": 0,
+          "text": "providers"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 290,
+          "end": 334,
+          "flags": 0,
+          "multiLine": true,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 292,
+              "end": 311,
+              "flags": 0,
+              "text": "SessionService"
+            },
+            {
+              "kind": 69,
+              "pos": 312,
+              "end": 330,
+              "flags": 0,
+              "text": "CameraService"
+            }
+          ]
+        }
+      },
+      {
+        "kind": 253,
+        "pos": 335,
+        "end": 371,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 335,
+          "end": 345,
+          "flags": 0,
+          "text": "imports"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 346,
+          "end": 371,
+          "flags": 0,
+          "multiLine": true,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 348,
+              "end": 367,
+              "flags": 0,
+              "text": "MaterialModule"
+            }
+          ]
+        }
+      },
+      {
+        "kind": 253,
+        "pos": 372,
+        "end": 406,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 372,
+          "end": 387,
+          "flags": 0,
+          "text": "declarations"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 388,
+          "end": 406,
+          "flags": 0,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 390,
+              "end": 405,
+              "flags": 0,
+              "text": "CameraComponent"
+            }
+          ]
+        }
+      },
+      {
+        "kind": 253,
+        "pos": 407,
+        "end": 436,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 407,
+          "end": 417,
+          "flags": 0,
+          "text": "exports"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 418,
+          "end": 436,
+          "flags": 0,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 420,
+              "end": 435,
+              "flags": 0,
+              "text": "CameraComponent"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
