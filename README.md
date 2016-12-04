@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/manekinekko/pichat.svg?style=svg)](https://circleci.com/gh/manekinekko/pichat)
+[![Build status](https://ci.appveyor.com/api/projects/status/7bkl7u4is8tf9cs0/branch/master?svg=true)](https://ci.appveyor.com/project/manekinekko/pichat/branch/master)
+
 # Angular 2 Chat Application
 
 <img src="documentation/screenshot.gif" alt="">
