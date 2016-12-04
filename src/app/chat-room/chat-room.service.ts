@@ -23,12 +23,28 @@ export class ChatRoomService {
   }
 
   getRoom(roomKey) {
+    return this.af.database.object(`/rooms/${roomKey}`);
+  }
+
+  getMessages(roomKey) {
     return this.af.database.list(`/rooms/${roomKey}/messages`);
   }
 
+  getRoomAndMessages(roomKey) {
+    return {
+      room: this.getRoom(roomKey),
+      messages: this.getMessages(roomKey)
+    };
+  }
+
   addMessage(roomKey, message) {
-    const room = this.af.database.list(`/rooms/${roomKey}/messages`);
-    return room.push(message);
+    const room = this.getRoom(roomKey);
+    const messages = this.af.database.list(`/rooms/${roomKey}/messages`, {
+      query: {
+        limitToLast: 100,
+      }
+    });
+    return messages.push(message);
   }
 
 }

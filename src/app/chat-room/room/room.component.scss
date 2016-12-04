@@ -2,20 +2,41 @@
     width: 100%;
 }
 
-md-card {
-    &:first-child {
-        padding: 0;
-        margin-bottom: 110px;
+button {
+    z-index: 2;
+}
+
+div.md-list-item {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.message-list {
+    margin-bottom: 80px;
+    md-card {
+        display: flex;
+        padding-right: 0;
+        padding-left: 0;
         z-index: 1;
+        img {
+            border-radius: 50%;
+            width: 46px;
+            height: 46px;
+            margin: 0 15px;
+        }
+        p {
+            margin: 0;
+            padding: 5px;
+        }
+        &.me {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
     }
 }
 
 md-input.full-width {
     width: 100%;
-}
-
-md-list-item.me .md-list-item {
-    flex-direction: row-reverse;
 }
 
 .message-date {
@@ -35,4 +56,6 @@ md-list-item.me .md-list-item {
     margin: 0;
     right: 0;
     left: 0;
+    padding: 10px 6px;
+    background-color: white;
 }

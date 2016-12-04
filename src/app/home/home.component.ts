@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   }
 
   onLogout() {
-
+    this.session = null;
   }
 
 }

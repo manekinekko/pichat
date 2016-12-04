@@ -2,23 +2,25 @@
     <md-icon>list</md-icon>
 </button>
 
-<md-card>
-    <md-list>
-        <md-list-item *ngFor="let message of messages | async" [ngClass]="{ 'me': isMyMessage(message) }">
-            <img md-list-avatar [src]="message.user.photoURL">
+<md-progress-bar *ngIf="isLoading" mode="indeterminate"></md-progress-bar>
+<section class="message-list">
+    <md-card *ngFor="let message of messages" [ngClass]="{ 'me': isMyMessage(message) }">
+        <img md-list-avatar [src]="message.user.photoURL">
+        <div>
             <p md-line class="message-date">
-                {{message.date | date:'d/M/y'}}
+                {{message.date | date:'d/M HH:MM:ss'}}
             </p>
             <p md-line class="message-text">
                 <span> {{message.text}} </span>
             </p>
-        </md-list-item>
-    </md-list>
-</md-card>
-<md-card class="message-container">
+        </div>
+    </md-card>
+</section>
+
+<section class="message-container">
     <button md-prefix><md-icon>camera</md-icon></button>
     <md-input [(ngModel)]="newMessage" placeholder="Your message..." maxlength="140" class="full-width" #characterCountHint>
         <md-hint align="end">{{characterCountHint.characterCount}} / 140</md-hint>
     </md-input>
     <button md-suffix [disabled]="!newMessage" (click)="send()"><md-icon>send</md-icon></button>
-</md-card>
+</section>

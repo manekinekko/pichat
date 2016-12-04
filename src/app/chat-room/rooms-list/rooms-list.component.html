@@ -1,15 +1,9 @@
 <md-card>
-
-    <p *ngIf="rooms.length == 0">
-        <i>No Message</i>
-    </p>
-
-    <md-list *ngIf="rooms.length > 0">
+    <md-list>
         <h3 md-subheader>Rooms</h3>
         <md-list-item *ngFor="let room of rooms" [routerLink]="['/rooms', room.$key]">
             <md-icon md-list-avatar>group</md-icon>
             <h4 md-line>{{room.roomName}}</h4>
-            <p md-line class="demo-2"> {{room.updated}} </p>
         </md-list-item>
     </md-list>
 </md-card>

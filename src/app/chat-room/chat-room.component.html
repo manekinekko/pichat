@@ -2,4 +2,5 @@
     <md-icon>add</md-icon>
 </button>
 
+<md-progress-bar *ngIf="isLoading" mode="indeterminate"></md-progress-bar>
 <app-rooms-list [rooms]="rooms"></app-rooms-list>
