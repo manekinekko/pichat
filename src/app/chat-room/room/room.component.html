@@ -4,16 +4,19 @@
 
 <md-progress-bar *ngIf="isLoading" mode="indeterminate"></md-progress-bar>
 <section class="message-list">
-    <md-card *ngFor="let message of messages" [ngClass]="{ 'me': isMyMessage(message) }">
-        <img md-list-avatar [src]="message.user.photoURL">
+    <md-card *ngFor="let message of messages" [ngClass]="{ 'me': isMyMessage(message) }" [ngStyle]="setCardStyle(message)">
+
+        <object data="assets/images/default-avatar.png" type="image/jpg">
+            <img [src]="message.user.photoURL">
+        </object>
+
         <div>
             <p md-line class="message-date">
                 {{message.date | date:'d/M HH:MM:ss'}}
             </p>
-            <p md-line class="message-text">
+            <p md-line class="message-text" *ngIf="message.text" [ngClass]="{ 'has-background': !!message.image }">
                 <span> {{message.text}} </span>
             </p>
-            <a *ngIf="message.image" [href]="message.image" target="_blank"><img [src]="message.image"></a>
         </div>
     </md-card>
 </section>

@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { ChatRoomComponent } from './chat-room.component';
 import { RoomsListComponent } from './rooms-list/rooms-list.component';
 import { ChatRoomService } from './chat-room.service';
+import { ChatRoomGuard } from './chat-room.guard.service';
 import { CreateRoomComponent } from './create-room/create-room.component';
 import { RoomComponent } from './room/room.component';
 import { AppRoutes } from './chat-room.routes';
@@ -21,7 +22,8 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule
   ],
   providers: [
-    ChatRoomService
+    ChatRoomService,
+    ChatRoomGuard
   ],
   declarations: [ChatRoomComponent, RoomsListComponent, CreateRoomComponent, RoomComponent]
 })

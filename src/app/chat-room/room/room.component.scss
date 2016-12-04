@@ -20,10 +20,6 @@ div.md-list-item {
     padding-right: 0;
     padding-left: 0;
     z-index: 1;
-    p {
-        margin: 0;
-        padding: 5px;
-    }
     &.me {
         flex-direction: row-reverse;
         text-align: right;
@@ -46,8 +42,19 @@ md-input.full-width {
     font-size: 13px;
 }
 
-.message-text span {
-    white-space: normal;
+.message-text {
+    span {
+        white-space: normal;
+    }
+    &.has-background {
+        background-color: rgba(0, 0, 0, 0.6);
+        bottom: -16px;
+        position: absolute;
+        left: 0;
+        text-align: justify;
+        color: white;
+        padding: 14px;
+    }
 }
 
 .message-text+a img {
@@ -82,4 +89,27 @@ md-input.full-width {
     height: 30px;
     margin: 10px 6px 0px 10px;
     border-radius: 50%;
+}
+
+img[md-prefix] {
+    border: 4px solid red;
+    animation: anim infinite 1s;
+}
+
+@keyframes anim {
+    from {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.2)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+object {
+    width: 56px;
+    height: 56px;
+    margin: 10px 19px;
 }

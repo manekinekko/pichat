@@ -91,4 +91,18 @@ export class RoomComponent implements OnInit {
     setTimeout( _ => window.scrollBy(0, Math.pow(10,99)), 10);
   }
 
+  setCardStyle(message) {
+
+    const style = {};
+
+    if (message.image) {
+      style['background-image'] = `url(${message.image})`;
+      style['background-size'] = 'cover';
+      style['background-repeat'] = 'no-repeat';
+      style['height'] = '200px';
+    }
+
+    return style;
+  }
+
 }

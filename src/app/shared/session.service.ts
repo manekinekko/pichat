@@ -4,7 +4,7 @@ import { AngularFire } from 'angularfire2';
 @Injectable()
 export class SessionService {
 
-  session;
+  session = null;
   title;
 
   constructor(private af: AngularFire) {
@@ -30,6 +30,10 @@ export class SessionService {
 
   getUser() {
     return this.session.google;
+  }
+
+  isLoggedIn() {
+    return this.session !== null;
   }
 
 }
