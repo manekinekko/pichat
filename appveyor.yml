@@ -14,4 +14,4 @@ shallow_clone: true
 test_script:
   - node --version
   - npm --version
-  - - ./node_modules/.bin/ng build --aot
+  - ./node_modules/.bin/ng build --aot
