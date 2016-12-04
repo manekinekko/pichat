@@ -4,7 +4,7 @@
 
 ## High Level Architecture
 
-<img src="documentation/dependencies.svg">
+<img src="https://cdn.rawgit.com/manekinekko/pichat/master/documentation/dependencies.svg">
 
 ## Have a PR?
 
