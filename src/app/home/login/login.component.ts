@@ -17,6 +17,9 @@ export class LoginComponent implements OnInit {
 
     this.onLogin = new EventEmitter<any>();
     this.onLogout = new EventEmitter<any>();
+  }
+
+  ngOnInit() {
     this.ss.getAuth().subscribe( session => {
       
       if(session) {
@@ -28,9 +31,6 @@ export class LoginComponent implements OnInit {
       
       this.session = session;
     });
-  }
-
-  ngOnInit() {
   }
 
   login() {

@@ -6,9 +6,7 @@
 <section class="message-list">
     <md-card *ngFor="let message of messages" [ngClass]="{ 'me': isMyMessage(message) }" [ngStyle]="setCardStyle(message)">
 
-        <object data="assets/images/default-avatar.png" type="image/jpg">
-            <img [src]="message.user.photoURL">
-        </object>
+        <img md-list-avatar [src]="message.user.photoURL">
 
         <div>
             <p md-line class="message-date">
