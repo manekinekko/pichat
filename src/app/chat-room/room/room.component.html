@@ -24,7 +24,7 @@
 <section class="message-container">
     <button md-prefix (click)="camera.request()" *ngIf="!lastPicture"><md-icon>camera</md-icon></button>
     <img md-prefix (click)="camera.request()" class="message-picture" [src]="lastPicture" *ngIf="lastPicture">
-    <md-input [(ngModel)]="newMessage" placeholder="Your message..." maxlength="140" class="full-width" #characterCountHint>
+    <md-input [(ngModel)]="newMessage" placeholder="Your message..." maxlength="140" class="full-width" #characterCountHint (keydown.enter)="send()">
         <md-hint align="end">{{characterCountHint.characterCount}} / 140</md-hint>
     </md-input>
     <button md-suffix [disabled]="!newMessage && !lastPicture" (click)="send()"><md-icon>send</md-icon></button>
