@@ -13,14 +13,20 @@
             <p md-line class="message-text">
                 <span> {{message.text}} </span>
             </p>
+            <a *ngIf="message.image" [href]="message.image" target="_blank"><img [src]="message.image"></a>
         </div>
     </md-card>
 </section>
 
 <section class="message-container">
-    <button md-prefix><md-icon>camera</md-icon></button>
+    <button md-prefix (click)="camera.request()" *ngIf="!lastPicture"><md-icon>camera</md-icon></button>
+    <img md-prefix (click)="camera.request()" class="message-picture" [src]="lastPicture" *ngIf="lastPicture">
     <md-input [(ngModel)]="newMessage" placeholder="Your message..." maxlength="140" class="full-width" #characterCountHint>
         <md-hint align="end">{{characterCountHint.characterCount}} / 140</md-hint>
     </md-input>
-    <button md-suffix [disabled]="!newMessage" (click)="send()"><md-icon>send</md-icon></button>
+    <button md-suffix [disabled]="!newMessage && !lastPicture" (click)="send()"><md-icon>send</md-icon></button>
+</section>
+
+<section class="camera-container" [@cameraState]="cameraState">
+    <app-camera #camera (onPicture)="onPicture($event)" (onCameraOn)="onCameraOn($event)"></app-camera>
 </section>

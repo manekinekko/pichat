@@ -13,26 +13,28 @@ div.md-list-item {
 
 .message-list {
     margin-bottom: 80px;
-    md-card {
-        display: flex;
-        padding-right: 0;
-        padding-left: 0;
-        z-index: 1;
-        img {
-            border-radius: 50%;
-            width: 46px;
-            height: 46px;
-            margin: 0 15px;
-        }
-        p {
-            margin: 0;
-            padding: 5px;
-        }
-        &.me {
-            flex-direction: row-reverse;
-            text-align: right;
-        }
+}
+
+.message-list md-card {
+    display: flex;
+    padding-right: 0;
+    padding-left: 0;
+    z-index: 1;
+    p {
+        margin: 0;
+        padding: 5px;
     }
+    &.me {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+}
+
+.message-list img {
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    margin: 0 15px;
 }
 
 md-input.full-width {
@@ -44,8 +46,14 @@ md-input.full-width {
     font-size: 13px;
 }
 
-.messate-text span {
+.message-text span {
     white-space: normal;
+}
+
+.message-text+a img {
+    border-radius: 0;
+    height: 200px;
+    width: 200px;
 }
 
 .message-container {
@@ -58,4 +66,20 @@ md-input.full-width {
     left: 0;
     padding: 10px 6px;
     background-color: white;
+}
+
+.camera-container {
+    background: #F4B42A;
+    width: 100%;
+    height: 500px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 10;
+}
+
+.message-picture {
+    width: 30px;
+    height: 30px;
+    margin: 10px 6px 0px 10px;
+    border-radius: 50%;
 }

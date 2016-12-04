@@ -7,16 +7,18 @@ import { FormsModule } from '@angular/forms';
 import { ChatRoomComponent } from './chat-room.component';
 import { RoomsListComponent } from './rooms-list/rooms-list.component';
 import { ChatRoomService } from './chat-room.service';
-import { AppRoutes } from './chat-room.routes';
 import { CreateRoomComponent } from './create-room/create-room.component';
 import { RoomComponent } from './room/room.component';
+import { AppRoutes } from './chat-room.routes';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     MaterialModule,
-    RouterModule.forChild(AppRoutes)
+    RouterModule.forChild(AppRoutes),
+    SharedModule
   ],
   providers: [
     ChatRoomService

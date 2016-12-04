@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, 
+  trigger,
+  state,
+  style,
+  transition,
+  animate } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { ChatRoomService } from '../chat-room.service';
 import { SessionService } from '../../shared/session.service';
@@ -6,7 +11,19 @@ import { SessionService } from '../../shared/session.service';
 @Component({
   selector: 'app-room',
   templateUrl: './room.component.html',
-  styleUrls: ['./room.component.scss']
+  styleUrls: ['./room.component.scss'],
+  animations: [
+    trigger('cameraState', [
+      state('off', style({
+        bottom: '-100%'
+      })),
+      state('on', style({
+        bottom: '0'
+      })),
+      transition('off => on', animate('100ms ease-in')),
+      transition('on => off', animate('100ms ease-out'))
+    ])
+  ]
 })
 export class RoomComponent implements OnInit {
 
@@ -15,6 +32,8 @@ export class RoomComponent implements OnInit {
   newMessage = '';
   roomKey;
   isLoading = true;
+  cameraState = 'off';
+  lastPicture = '';
 
   constructor(
     private cr: ChatRoomService,
@@ -47,10 +66,21 @@ export class RoomComponent implements OnInit {
     this.cr.addMessage(this.roomKey, {
       user: this.ss.getUser(),
       text: this.newMessage,
+      image: this.lastPicture,
       date: +(new Date())
     });
     this.newMessage = '';
+    this.lastPicture = '';
     this.scrollToLast();
+  }
+
+  onPicture(data) {
+    this.lastPicture = data;
+    this.cameraState = 'off';
+  }
+
+  onCameraOn() {
+    this.cameraState = 'on';
   }
 
   isMyMessage(message) {
