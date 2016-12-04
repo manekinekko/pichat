@@ -21,7 +21,7 @@ import { AppRoutes } from './app.routes';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(AppRoutes),
+    RouterModule.forRoot(AppRoutes, {useHash: true}),
     MaterialModule.forRoot(),
     CoreModule,
     SharedModule,
