@@ -1,0 +1,9 @@
+machine:
+  node:
+    version: 7.2.0
+
+test:
+  override:
+    - node --version
+    - npm --version
+    - ./node_modules/.bin/ng build --aot
