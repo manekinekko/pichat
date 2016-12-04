@@ -14,8 +14,8 @@ export class CameraComponent implements OnInit {
   @Output() onPicture: EventEmitter<string>;
   @Output() onCameraOn: EventEmitter<string>;
 
-  width = 200;
-  height = 200;
+  width = 1280;
+  height = 720;
   
   constructor(private cm: CameraService) {
     this.onPicture = new EventEmitter<string>();

@@ -15,7 +15,7 @@ import { SessionService } from '../../shared/session.service';
   animations: [
     trigger('cameraState', [
       state('off', style({
-        bottom: '-100%'
+        bottom: '-600px'
       })),
       state('on', style({
         bottom: '0'
