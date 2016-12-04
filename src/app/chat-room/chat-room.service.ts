@@ -22,11 +22,11 @@ export class ChatRoomService {
     return this.rooms;
   }
 
-  getRoom(roomKey) {
+  getRoom(roomKey): any {
     return this.af.database.object(`/rooms/${roomKey}`);
   }
 
-  getMessages(roomKey) {
+  getMessages(roomKey): any {
     return this.af.database.list(`/rooms/${roomKey}/messages`);
   }
 

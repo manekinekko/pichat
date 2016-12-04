@@ -9,7 +9,6 @@ export class SessionService {
 
   constructor(private af: AngularFire) {
     this.af.auth.subscribe( session => {
-      console.log(session);
       this.session = session;
     });
 
@@ -24,7 +23,7 @@ export class SessionService {
     this.title.emit(newTitle);
   }
 
-  getAuth() {
+  getAuth(): any {
     return this.af.auth;
   }
 
