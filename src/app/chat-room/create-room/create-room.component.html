@@ -4,6 +4,6 @@
 
 <md-card>
     <form #f="ngForm">
-        <md-input name="roomName" ngModel placeholder="Enter room name" maxlength="25"></md-input>
+        <md-input (keydown.enter)="create(f.value)" name="roomName" ngModel placeholder="Enter room name" maxlength="25"></md-input>
     </form>
 </md-card>

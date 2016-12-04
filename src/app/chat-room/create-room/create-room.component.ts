@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { ChatRoomService } from '../chat-room.service';
+import { SessionService } from '../../shared/session.service';
 
 @Component({
   selector: 'app-create-room',
@@ -12,14 +13,20 @@ export class CreateRoomComponent implements OnInit {
 
   constructor(
     private cr: ChatRoomService,
-    private router: Router
+    private router: Router,
+    private ss: SessionService
   ) { }
 
   ngOnInit() {
   }
 
-  create(roomName) {
-    const ref = this.cr.addRoom(roomName);
+  create(formValue) {
+    const ref = this.cr.addRoom({
+      room: {
+        name: formValue.roomName
+      },
+      author: this.ss.getUser()
+    });
     this.router.navigate(['/rooms/', ref.key]);
   }
 

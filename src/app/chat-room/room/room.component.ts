@@ -50,11 +50,11 @@ export class RoomComponent implements OnInit {
       this.messages = messages;
       this.scrollToLast();
     });
-    roomAndMessages.room.subscribe( room => {
-      if (room) {
-        this.room = room;
+    roomAndMessages.room.subscribe( roomObject => {
+      if (roomObject) {
+        this.room = roomObject;
         this.isLoading = false;
-        this.ss.setPageTitle(`Room: ${ room.roomName }`);
+        this.ss.setPageTitle(`Room: ${ roomObject.room.name }`);
       }
       else {
         this.rt.navigate(['/rooms']);

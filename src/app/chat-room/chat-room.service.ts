@@ -14,8 +14,8 @@ export class ChatRoomService {
     });
   }
 
-  addRoom(roomName: string) {
-    return this.rooms.push(roomName);
+  addRoom(room: any) {
+    return this.rooms.push(room);
   }
 
   getRooms() {
@@ -27,7 +27,11 @@ export class ChatRoomService {
   }
 
   getMessages(roomKey): any {
-    return this.af.database.list(`/rooms/${roomKey}/messages`);
+    return this.af.database.list(`/rooms/${roomKey}/messages`, {
+      query: {
+        limitToLast: 100,
+      }
+    });
   }
 
   getRoomAndMessages(roomKey) {
@@ -38,12 +42,7 @@ export class ChatRoomService {
   }
 
   addMessage(roomKey, message) {
-    const room = this.getRoom(roomKey);
-    const messages = this.af.database.list(`/rooms/${roomKey}/messages`, {
-      query: {
-        limitToLast: 100,
-      }
-    });
+    const messages = this.getMessages(roomKey);
     return messages.push(message);
   }
 
